@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ruibo Tang | Personal Website</title>
+  <meta name="description" content="Personal homepage of Jian Peng." />
+
+  <style>
+    :root { --max-width: 860px; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont,
+                   "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      line-height: 1.6;
+      color: #111;
+    }
+    .container {
+      max-width: var(--max-width);
+      margin: 56px auto;
+      padding: 0 20px;
+    }
+    header {
+      margin-bottom: 32px;
+    }
+    h1 {
+      margin: 0 0 8px;
+      font-size: 36px;
+    }
+    .subtitle {
+      margin: 0;
+      color: #555;
+    }
+    section {
+      margin-bottom: 28px;
+    }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 14px;
+      padding: 18px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+    ul {
+      margin: 8px 0 0;
+      padding-left: 20px;
+    }
+    a {
+      color: #0066cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      margin-top: 40px;
+      font-size: 14px;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+
+    <header>
+      <h1>Jian PENG</h1>
+      <p class="subtitle">
+        Researcher · PhD Student · Robotics & AI · Germany
+      </p>
+    </header>
+
+    <section class="card">
+      <h2>About Me</h2>
+      <p>
+        I am a researcher with interdisciplinary experience in robotics,
+        artificial intelligence, and science & technology studies.
+        My interests include human–AI interaction, intelligent systems,
+        and technology in social contexts.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Projects</h2>
+      <ul>
+        <li>
+          <strong>Dual-Arm Robot Control with Natural Language</strong> —
+          Language-guided task planning and execution for collaborative robots.
+        </li>
+        <li>
+          <strong>Multimodal Learning & Emotion Analysis</strong> —
+          Eye-tracking and emotion recognition in experimental settings.
+        </li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2>Links</h2>
+      <ul>
+        <li><a href="https://github.com/你的用户名" target="_blank">GitHub</a></li>
+        <li><a href="mailto:你的邮箱">Email</a></li>
+        <li><a href="#">CV (PDF)</a></li>
+      </ul>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Ruibo Tang
+    </footer>
+
+  </main>
+
+  <script>
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+</body>
+</html>

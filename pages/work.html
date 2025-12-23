@@ -39,7 +39,9 @@
     <div class="page-header">
       <div>
         <h1 class="page-title">Work Experience</h1>
-        <p class="page-subtitle">Selected roles with responsibilities and impact.</p>
+        <p class="page-subtitle">
+          A timeline of roles with a compact overview and expandable details.
+        </p>
       </div>
 
       <nav class="breadcrumb">
@@ -51,79 +53,415 @@
       </nav>
     </div>
 
-    <section class="section">
-      <article class="card">
-        <h2 class="item-title">Data/BI Specialist — ETERNA Mode, Passau</h2>
-        <p class="item-meta">07/2025 – Present</p>
-        <ul>
-          <li>Building an enterprise-wide Data/BI platform on Microsoft Fabric as a central data hub.</li>
-          <li>Integrating Dynamics 365, Salesforce, Tradebyte, Kubix/Lectra, Google BigQuery, and on-prem systems.</li>
-          <li>Delivering cross-department data requirements with focus on data quality and operational stability.</li>
-        </ul>
-        <div class="badges">
-          <span class="badge">Microsoft Fabric</span><span class="badge">PySpark</span>
-          <span class="badge">SQL</span><span class="badge">Power BI</span><span class="badge">Azure</span>
-        </div>
-      </article>
+    <!-- ✅ Timeline -->
+    <section class="timeline">
 
-      <article class="card">
-        <h2 class="item-title">Data Engineer / Digitalization Engineer — ALTEN (Krones), Raubling</h2>
-        <p class="item-meta">01/2025 – 06/2025 (external project engineer at Krones: 01/2025–05/2025)</p>
-        <ul>
-          <li>Restructured an internal web platform and consolidated heterogeneous data into a unified data model.</li>
-          <li>Extracted information from free text in Databricks using active-learning-oriented pattern recognition.</li>
-          <li>Built Power BI dashboards and implemented platform extensions.</li>
-        </ul>
-        <div class="badges">
-          <span class="badge">Azure Databricks</span><span class="badge">PySpark</span>
-          <span class="badge">SQL</span><span class="badge">PHP</span><span class="badge">Power BI</span>
-        </div>
-      </article>
+      <!-- 1) ETERNA -->
+      <details class="timeline-item" open>
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/eterna.svg" alt="ETERNA Mode logo" />
+          </div>
 
-      <article class="card">
-        <h2 class="item-title">Working Student — Data Engineer, Versicherungskammer Bayern, Munich</h2>
-        <p class="item-meta">05/2024 – 12/2024</p>
-        <ul>
-          <li>Validated a new Data Vault 2.0 model against the legacy system via row-level and hash-key comparisons.</li>
-          <li>Developed Qlik Sense scripts to integrate multi-source data and migrated dashboards with reconciliation.</li>
-        </ul>
-        <div class="badges">
-          <span class="badge">Qlik Sense</span><span class="badge">SQL</span><span class="badge">Data Vault 2.0</span>
-        </div>
-      </article>
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Data/BI Specialist</h2>
+              <span class="company">ETERNA Mode</span>
+            </div>
 
-      <article class="card">
-        <h2 class="item-title">Working Student — BI Engineer, DeutschlandCard, Munich</h2>
-        <p class="item-meta">09/2022 – 04/2024</p>
-        <ul>
-          <li>Automated recurring data refreshes using Python scripts and Airflow DAGs.</li>
-          <li>Modeled and optimized SQL-based data marts by KPI categories; delivered monthly partner reports.</li>
-          <li>Coordinated regulatory inquiries and fraud cases with structured documentation and reporting.</li>
-        </ul>
-        <div class="badges">
-          <span class="badge">SQL</span><span class="badge">Python</span><span class="badge">Airflow</span><span class="badge">Tableau</span>
-        </div>
-      </article>
+            <div class="summary-meta">
+              <span class="location">Passau</span>
+              <span class="dot">•</span>
+              <span class="time">Jul 2025 – Present</span>
+            </div>
 
-      <article class="card">
-        <h2 class="item-title">Data Analysis & Automation — Hydrogen Fuel Cell Systems, Freudenberg, Munich</h2>
-        <p class="item-meta">03/2022 – 05/2022</p>
-        <ul>
-          <li>Built Python scripts for automated processing and cloud uploading of measurement data.</li>
-          <li>Conducted analyses and prepared internal reports for system performance evaluation.</li>
-        </ul>
-        <div class="badges">
-          <span class="badge">Python</span><span class="badge">imc FAMOS</span><span class="badge">Origin</span>
-        </div>
-      </article>
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Retail</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Data Platform</span>
+                <span class="tag">BI</span>
+                <span class="tag">Data Quality</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">Microsoft Fabric</span>
+                <span class="tag">PySpark</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">Azure</span>
+              </div>
+            </div>
+          </div>
 
-      <article class="card">
-        <h2 class="item-title">Intern — Customer Service & Branch Operations, Bank of China, Xiangxiang</h2>
-        <p class="item-meta">12/2015 – 01/2016</p>
-        <ul>
-          <li>Supported branch operations and customer service workflows.</li>
-        </ul>
-      </article>
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Building an enterprise-wide Data/BI platform on Microsoft Fabric as a central data hub.</li>
+                <li>Integrating Dynamics 365, Salesforce, Tradebyte, Kubix/Lectra, Google BigQuery, and on-prem systems.</li>
+                <li>Delivering cross-department data requirements with focus on data quality and operational stability.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>How to translate cross-department needs into a scalable data model and semantic layer.</li>
+                <li>Practical reconciliation patterns to keep reports consistent across heterogeneous sources.</li>
+                <li>Operational thinking: monitoring, repeatability, and reliability as first-class requirements.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 2) ALTEN / Krones -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/alten.svg" alt="ALTEN logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Data Engineer / Digitalization Engineer</h2>
+              <span class="company">ALTEN (Krones project)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Raubling</span>
+              <span class="dot">•</span>
+              <span class="time">Jan 2025 – Jun 2025</span>
+            </div>
+
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Manufacturing</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Data Integration</span>
+                <span class="tag">BI</span>
+                <span class="tag">Automation</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">Azure Databricks</span>
+                <span class="tag">PySpark</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Power BI</span>
+                <span class="tag">PHP</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Restructured an internal web platform and consolidated heterogeneous data into a unified data model.</li>
+                <li>Extracted information from free text in Databricks using active-learning-oriented pattern recognition.</li>
+                <li>Built Power BI dashboards and implemented platform extensions.</li>
+                <li class="panel-list-note">External project engineer at Krones: Jan 2025 – May 2025.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>How to work with messy real-world enterprise data and still deliver stable KPIs.</li>
+                <li>Patterns for incremental improvements: ship small changes, validate fast, iterate.</li>
+                <li>Bridging engineering and stakeholders: turning “questions” into measurable metrics.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 3) Versicherungskammer Bayern -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/vkb.svg" alt="Versicherungskammer Bayern logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Working Student — Data Engineer</h2>
+              <span class="company">Versicherungskammer Bayern</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich</span>
+              <span class="dot">•</span>
+              <span class="time">May 2024 – Dec 2024</span>
+            </div>
+
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Insurance</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Data Quality</span>
+                <span class="tag">Data Modeling</span>
+                <span class="tag">BI Migration</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">Qlik Sense</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Data Vault 2.0</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Validated a new Data Vault 2.0 model against the legacy system via row-level and hash-key comparisons.</li>
+                <li>Developed Qlik Sense scripts to integrate multi-source data and migrated dashboards with reconciliation.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>How to design data validation as a systematic workflow (not a one-off check).</li>
+                <li>Data Vault concepts in practice and how they support traceability.</li>
+                <li>Migration mindset: reconcile, compare, and communicate differences clearly.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 4) DeutschlandCard -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/dc.png" alt="DeutschlandCard logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Working Student — BI Engineer</h2>
+              <span class="company">DeutschlandCard</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich</span>
+              <span class="dot">•</span>
+              <span class="time">Sep 2022 – Apr 2024</span>
+            </div>
+
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Retail / Loyalty</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Data Marts</span>
+                <span class="tag">Reporting</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">SQL</span>
+                <span class="tag">Python</span>
+                <span class="tag">Airflow</span>
+                <span class="tag">Tableau</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Automated recurring data refreshes using Python scripts and Airflow DAGs.</li>
+                <li>Modeled and optimized SQL-based data marts by KPI categories; delivered monthly partner reports.</li>
+                <li>Coordinated regulatory inquiries and fraud cases with structured documentation and reporting.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>How to operationalize BI: schedules, failures, retries, and reproducibility.</li>
+                <li>Designing KPI-oriented marts that serve different stakeholders without confusion.</li>
+                <li>Working under compliance pressure: documentation quality matters.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 5) Freudenberg -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/fd.svg" alt="Freudenberg logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Data Analysis & Automation</h2>
+              <span class="company">Freudenberg (Hydrogen Fuel Cell Systems)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich</span>
+              <span class="dot">•</span>
+              <span class="time">Mar 2022 – May 2022</span>
+            </div>
+
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Energy / Manufacturing</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Automation</span>
+                <span class="tag">Data Processing</span>
+                <span class="tag">Reporting</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">Python</span>
+                <span class="tag">imc FAMOS</span>
+                <span class="tag">Origin</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Built Python scripts for automated processing and cloud uploading of measurement data.</li>
+                <li>Conducted analyses and prepared internal reports for system performance evaluation.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>Turning lab/measurement outputs into clean datasets ready for analysis.</li>
+                <li>How automation reduces repetitive work and improves traceability.</li>
+                <li>Communicating results clearly in internal technical reporting.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
+      <!-- 6) Bank of China -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/company/boc.svg" alt="Bank of China logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">Intern — Customer Service & Branch Operations</h2>
+              <span class="company">Bank of China</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Xiangxiang</span>
+              <span class="dot">•</span>
+              <span class="time">Dec 2015 – Jan 2016</span>
+            </div>
+
+            <div class="tag-rows">
+              <div class="tag-row">
+                <span class="tag-key">Domain</span>
+                <span class="tag">Banking</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Focus</span>
+                <span class="tag">Operations</span>
+                <span class="tag">Customer Service</span>
+              </div>
+              <div class="tag-row">
+                <span class="tag-key">Stack</span>
+                <span class="tag">—</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div class="panel-grid">
+            <div>
+              <h3 class="panel-heading">Responsibilities & Impact</h3>
+              <ul class="panel-list">
+                <li>Supported branch operations and customer service workflows.</li>
+              </ul>
+            </div>
+
+            <div>
+              <h3 class="panel-heading">What I learned</h3>
+              <ul class="panel-list">
+                <li>How standardized processes keep high-volume frontline services reliable.</li>
+                <li>Customer communication fundamentals and attention to detail.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </details>
+
     </section>
 
     <footer class="footer">© <span id="y"></span> Jian Peng</footer>
@@ -131,6 +469,19 @@
 
   <script>
     document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ✅ OPTIONAL: accordion behavior (only one open at a time) -->
+  <script>
+    document.querySelectorAll(".timeline-item").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          document.querySelectorAll(".timeline-item").forEach((other) => {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
   </script>
 
   <!-- ✅ IMPORTANT: load the shared theme script (pages/ -> ../js/) -->

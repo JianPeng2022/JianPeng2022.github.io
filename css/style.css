@@ -9,7 +9,7 @@
   --chip-bg: #ffffff1f;
   --chip-border: rgba(255,255,255,0.35);
 
-  /* surfaces for cards / timeline */
+  /* surfaces for cards / timeline / pills */
   --surface: rgba(0,0,0,0.02);
   --surface-2: rgba(0,0,0,0.04);
 }
@@ -37,6 +37,22 @@ body{
   line-height: 1.6;
 }
 
+/* ---------- Global layout (sub pages) ---------- */
+.container{
+  max-width: min(1280px, 92vw);
+  margin: 0 auto;
+  padding: 42px 24px 64px;
+}
+
+/* nicer default links (avoid purple underlines) */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
 /* ---------- HERO (full screen background) ---------- */
 .hero{
   position: relative;
@@ -51,7 +67,8 @@ body{
 }
 
 .hero .overlay{
-  position:absolute; inset:0;
+  position:absolute;
+  inset: 0;
   /* overlay changes a bit between themes */
   background: rgba(0,0,0,0.55);
 }
@@ -89,7 +106,7 @@ body{
 
 .hero-links{
   margin-top: 22px;
-  display:flex;
+  display: flex;
   gap: 12px;
   justify-content: center;
   flex-wrap: wrap;
@@ -137,6 +154,78 @@ body{
   transform: translateY(-1px);
 }
 
+/* ---------- Page header (Reusable template) ---------- */
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 18px;
+  margin-bottom: 18px;
+}
+
+.page-title{
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: 0.01em;
+  line-height: 1.12;
+}
+
+.page-rule{
+  margin: 12px 0 10px;
+  height: 2px;
+  width: min(420px, 70%);
+  background: var(--text);
+  opacity: 0.15;
+  border-radius: 999px;
+}
+
+.page-subtitle{
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+/* breadcrumb as pills */
+.breadcrumb{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.breadcrumb a{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover{
+  color: var(--text);
+  background: var(--surface-2);
+  text-decoration: none;
+}
+
+.breadcrumb a[aria-current="page"]{
+  color: var(--text);
+  background: var(--surface-2);
+  border-color: var(--border);
+}
+
+/* stack header on small screens */
+@media (max-width: 720px){
+  .page-header{
+    flex-direction: column;
+  }
+  .breadcrumb{
+    justify-content: flex-start;
+  }
+}
+
 /* =========================================================
    Timeline + Details (Work page)
    Put your Work items inside: <section class="timeline">...
@@ -144,8 +233,8 @@ body{
 
 .timeline{
   position: relative;
-  margin-top: 18px;
-  padding-left: 22px; /* left line space */
+  margin-top: 26px;
+  padding-left: 28px; /* slightly more stable than 22px */
 }
 
 .timeline::before{
@@ -318,91 +407,4 @@ body{
 @media (max-width: 860px){
   .timeline-summary{ grid-template-columns: 48px 1fr auto; }
   .panel-grid{ grid-template-columns: 1fr; }
-}
-
-/* ================================
-   Global page layout (for sub pages)
-   ================================ */
-
-.container{
-  max-width: min(1280px, 92vw);
-  margin: 0 auto;
-  padding: 42px 24px 64px;
-}
-
-/* nicer default links (avoid purple underlines in breadcrumb) */
-a{
-  color: inherit;
-  text-decoration: none;
-}
-a:hover{
-  text-decoration: underline;
-}
-
-/* ================================
-   Page header (Work/Education/Projects...)
-   ================================ */
-
-.page-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 16px;
-  margin-bottom: 18px;
-}
-
-.page-title{
-  margin: 0;
-  font-size: clamp(28px, 3.2vw, 44px);
-  letter-spacing: 0.01em;
-  line-height: 1.15;
-}
-
-.page-subtitle{
-  margin: 10px 0 0;
-  color: var(--muted);
-  font-size: 1.02rem;
-}
-
-/* breadcrumb as pills */
-.breadcrumb{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  justify-content: flex-end;
-}
-
-.breadcrumb a{
-  padding: 8px 12px;
-  border-radius: 999px;
-  border: 1px solid var(--border);
-  background: var(--surface);
-  color: var(--muted);
-  font-size: 0.95rem;
-  line-height: 1;
-  text-decoration: none;
-}
-
-.breadcrumb a:hover{
-  color: var(--text);
-  background: var(--surface-2);
-  text-decoration: none;
-}
-
-/* stack header on small screens */
-@media (max-width: 720px){
-  .page-header{
-    align-items: flex-start;
-    flex-direction: column;
-  }
-  .breadcrumb{
-    justify-content: flex-start;
-  }
-}
-
-/* ================================
-   Timeline spacing fine-tune
-   ================================ */
-.timeline{
-  margin-top: 26px; /* give timeline more breathing room */
 }

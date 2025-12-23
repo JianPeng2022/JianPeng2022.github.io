@@ -319,3 +319,90 @@ body{
   .timeline-summary{ grid-template-columns: 48px 1fr auto; }
   .panel-grid{ grid-template-columns: 1fr; }
 }
+
+/* ================================
+   Global page layout (for sub pages)
+   ================================ */
+
+.container{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 42px 18px 60px;
+}
+
+/* nicer default links (avoid purple underlines in breadcrumb) */
+a{
+  color: inherit;
+  text-decoration: none;
+}
+a:hover{
+  text-decoration: underline;
+}
+
+/* ================================
+   Page header (Work/Education/Projects...)
+   ================================ */
+
+.page-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.page-title{
+  margin: 0;
+  font-size: clamp(28px, 3.2vw, 44px);
+  letter-spacing: 0.01em;
+  line-height: 1.15;
+}
+
+.page-subtitle{
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: 1.02rem;
+}
+
+/* breadcrumb as pills */
+.breadcrumb{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-end;
+}
+
+.breadcrumb a{
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover{
+  color: var(--text);
+  background: var(--surface-2);
+  text-decoration: none;
+}
+
+/* stack header on small screens */
+@media (max-width: 720px){
+  .page-header{
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .breadcrumb{
+    justify-content: flex-start;
+  }
+}
+
+/* ================================
+   Timeline spacing fine-tune
+   ================================ */
+.timeline{
+  margin-top: 26px; /* give timeline more breathing room */
+}

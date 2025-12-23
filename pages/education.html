@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work Experience | Jian Peng</title>
+
+  <!-- ✅ 可选但推荐：防止 light/dark 切换时闪一下 -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme =
+        (saved === "light" || saved === "dark")
+          ? saved
+          : (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+
+<body>
+  <!-- ✅ Theme toggle button -->
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+  >
+    <span class="theme-icon" aria-hidden="true">☾</span>
+    <span class="theme-text">Dark</span>
+  </button>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Education</h1>
+        <p class="page-subtitle">Degrees and programs.</p>
+      </div>
+
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./personal.html">Personal</a>
+      </nav>
+    </div>
+
+    <section class="section">
+      <article class="card">
+        <h2 class="item-title">Technical University of Munich (TUM) — Master’s Studies (part-time)</h2>
+        <p class="item-meta">10/2020 – Present · Munich, Germany</p>
+        <ul>
+          <li><strong>Electrical Engineering and Information Technology (M.Sc.)</strong> — currently enrolled</li>
+          <li><strong>Politics & Technology (M.Sc.)</strong> — Grade 1.9 (completed)</li>
+          <li><strong>Management (M.Sc.)</strong> — Grade 1.9 (completed)</li>
+          <li><strong>Mechatronics and Robotics (M.Sc.)</strong> — Grade 1.8 (completed)</li>
+          <li><strong>Mechanical Engineering (M.Sc.)</strong> — Grade 2.0 (completed)</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">SF Education Center — German Language Studies</h2>
+        <p class="item-meta">09/2019 – 05/2020 · Essen, Germany</p>
+        <ul>
+          <li>Levels B1–C1; telc Deutsch C1 Hochschule certificate.</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">University of León — B.Eng. Mechanical Engineering</h2>
+        <p class="item-meta">09/2016 – 07/2019 · León, Spain · Grade 2.7</p>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Xiangtan University — B.Eng. Mechanical Engineering</h2>
+        <p class="item-meta">09/2014 – 07/2016 · China · Grade 2.7</p>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Scholarship</h2>
+        <ul>
+          <li>Deutschlandstipendium 2023/2024</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Jian Peng</footer>
+  </main>
+
+  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+</body>
+</html>

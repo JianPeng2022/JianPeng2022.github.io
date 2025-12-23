@@ -1,0 +1,128 @@
+/* ---------- Theme tokens ---------- */
+:root{
+  --border: #eaeaea;
+  --muted: #666;
+  --text: #111;
+  --bg: #fff;
+  --chip-bg: rgba(255,255,255,0.12);
+  --chip-border: rgba(255,255,255,0.35);
+}
+
+:root[data-theme="dark"]{
+  --text: #f5f5f5;
+  --bg: #1a1f25;
+  --muted: rgba(245,245,245,0.75);
+  --border: rgba(255,255,255,0.18);
+  --chip-bg: rgba(0,0,0,0.20);
+  --chip-border: rgba(255,255,255,0.35);
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- HERO (full screen background) ---------- */
+.hero{
+  position: relative;
+  min-height: 100vh;              /* ✅ full screen */
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #fff;
+
+  /* ✅ IMPORTANT: path from css/ to assets/ */
+  background: url("../assets/bg.png") center/cover no-repeat;
+}
+
+.hero .overlay{
+  position:absolute; inset:0;
+  /* overlay changes a bit between themes */
+  background: rgba(0,0,0,0.55);
+}
+
+:root[data-theme="light"] .hero .overlay{
+  background: rgba(0,0,0,0.45);
+}
+
+.hero-content{
+  position: relative;
+  z-index: 1;
+  max-width: 980px;
+  padding: 0 18px;
+}
+
+.hero h1{
+  margin: 0;
+  font-size: clamp(42px, 6vw, 88px);
+  letter-spacing: 0.06em;
+  font-weight: 800;
+}
+
+.subtitle{
+  margin: 12px 0 0;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.tagline{
+  margin: 14px 0 0;
+  font-size: 18px;
+  font-style: italic;
+  opacity: 0.9;
+}
+
+.hero-links{
+  margin-top: 22px;
+  display:flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-links a{
+  color: #fff;
+  text-decoration: none;
+  border: 1px solid var(--chip-border);
+  padding: 10px 14px;
+  border-radius: 12px;
+  backdrop-filter: blur(6px);
+  background: var(--chip-bg);
+}
+
+.hero-links a:hover{
+  border-color: rgba(255,255,255,0.7);
+}
+
+/* ---------- Theme Toggle Button ---------- */
+.theme-toggle{
+  position: fixed;
+  top: 16px;
+  right: 16px;
+  z-index: 10;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(0,0,0,0.25);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 14px;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  backdrop-filter: blur(8px);
+}
+
+:root[data-theme="light"] .theme-toggle{
+  border: 1px solid rgba(0,0,0,0.20);
+  background: rgba(255,255,255,0.35);
+  color: #111;
+}
+
+.theme-toggle:hover{
+  transform: translateY(-1px);
+}

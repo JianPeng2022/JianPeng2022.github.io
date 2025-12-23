@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Work Experience | Jian Peng</title>
+
+  <!-- ✅ Prevent theme flicker: set theme before CSS paints -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme =
+        (saved === "light" || saved === "dark")
+          ? saved
+          : (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- ✅ Theme toggle button (same as index) -->
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+  >
+    <span class="theme-icon" aria-hidden="true">☾</span>
+    <span class="theme-text">Dark</span>
+  </button>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Work Experience</h1>
+        <p class="page-subtitle">Selected roles with responsibilities and impact.</p>
+      </div>
+
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <a href="./education.html">Education</a>
+        <a href="./projects.html">Projects</a>
+        <a href="./personal.html">Personal</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </div>
+
+    <section class="section">
+      <article class="card">
+        <h2 class="item-title">Data/BI Specialist — ETERNA Mode, Passau</h2>
+        <p class="item-meta">07/2025 – Present</p>
+        <ul>
+          <li>Building an enterprise-wide Data/BI platform on Microsoft Fabric as a central data hub.</li>
+          <li>Integrating Dynamics 365, Salesforce, Tradebyte, Kubix/Lectra, Google BigQuery, and on-prem systems.</li>
+          <li>Delivering cross-department data requirements with focus on data quality and operational stability.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Microsoft Fabric</span><span class="badge">PySpark</span>
+          <span class="badge">SQL</span><span class="badge">Power BI</span><span class="badge">Azure</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Data Engineer / Digitalization Engineer — ALTEN (Krones), Raubling</h2>
+        <p class="item-meta">01/2025 – 06/2025 (external project engineer at Krones: 01/2025–05/2025)</p>
+        <ul>
+          <li>Restructured an internal web platform and consolidated heterogeneous data into a unified data model.</li>
+          <li>Extracted information from free text in Databricks using active-learning-oriented pattern recognition.</li>
+          <li>Built Power BI dashboards and implemented platform extensions.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Azure Databricks</span><span class="badge">PySpark</span>
+          <span class="badge">SQL</span><span class="badge">PHP</span><span class="badge">Power BI</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Working Student — Data Engineer, Versicherungskammer Bayern, Munich</h2>
+        <p class="item-meta">05/2024 – 12/2024</p>
+        <ul>
+          <li>Validated a new Data Vault 2.0 model against the legacy system via row-level and hash-key comparisons.</li>
+          <li>Developed Qlik Sense scripts to integrate multi-source data and migrated dashboards with reconciliation.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Qlik Sense</span><span class="badge">SQL</span><span class="badge">Data Vault 2.0</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Working Student — BI Engineer, DeutschlandCard, Munich</h2>
+        <p class="item-meta">09/2022 – 04/2024</p>
+        <ul>
+          <li>Automated recurring data refreshes using Python scripts and Airflow DAGs.</li>
+          <li>Modeled and optimized SQL-based data marts by KPI categories; delivered monthly partner reports.</li>
+          <li>Coordinated regulatory inquiries and fraud cases with structured documentation and reporting.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">SQL</span><span class="badge">Python</span><span class="badge">Airflow</span><span class="badge">Tableau</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Data Analysis & Automation — Hydrogen Fuel Cell Systems, Freudenberg, Munich</h2>
+        <p class="item-meta">03/2022 – 05/2022</p>
+        <ul>
+          <li>Built Python scripts for automated processing and cloud uploading of measurement data.</li>
+          <li>Conducted analyses and prepared internal reports for system performance evaluation.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">imc FAMOS</span><span class="badge">Origin</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Intern — Customer Service & Branch Operations, Bank of China, Xiangxiang</h2>
+        <p class="item-meta">12/2015 – 01/2016</p>
+        <ul>
+          <li>Supported branch operations and customer service workflows.</li>
+        </ul>
+      </article>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Jian Peng</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ✅ IMPORTANT: load the shared theme script (pages/ -> ../js/) -->
+  <script src="../js/theme.js" defer></script>
+</body>
+</html>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Personal | Jian Peng</title>
+  <title>About | Jian Peng</title>
 
   <!-- ✅ Prevent theme flicker: set theme before CSS paints -->
   <script>
@@ -24,7 +24,7 @@
 </head>
 
 <body>
-  <!-- ✅ Theme toggle button -->
+  <!-- ✅ Theme toggle button (same as index & work) -->
   <button
     class="theme-toggle"
     id="themeToggle"
@@ -38,39 +38,20 @@
   <main class="container">
     <div class="page-header">
       <div>
-        <h1 class="page-title">Personal</h1>
-        <p class="page-subtitle">Languages, interests, and a bit more.</p>
+        <h1 class="page-title">About</h1>
+        <p class="page-subtitle">Contact & links.</p>
       </div>
 
       <nav class="breadcrumb">
         <a href="../index.html">Home</a>
+        <a href="./projects.html">Projects</a>
         <a href="./work.html">Work</a>
         <a href="./education.html">Education</a>
-        <a href="./projects.html">Projects</a>
-        <a href="./about.html">About</a>
+        <a href="./personal.html">Personal</a>
       </nav>
     </div>
 
     <section class="section">
-      <article class="card">
-        <h2 class="item-title">Languages</h2>
-        <ul>
-          <li>Chinese — C2</li>
-          <li>German — C1</li>
-          <li>English — C1</li>
-          <li>Spanish — B2</li>
-        </ul>
-      </article>
-
-      <article class="card">
-        <h2 class="item-title">Interests</h2>
-        <ul>
-          <li>Swimming</li>
-          <li>Reading</li>
-          <li>Camino de Santiago</li>
-        </ul>
-      </article>
-
       <article class="card">
         <h2 class="item-title">Contact</h2>
         <ul>
@@ -93,7 +74,7 @@
               target="_blank"
               rel="noreferrer"
             >
-              Profile
+              jian-peng-ai010101
             </a>
           </li>
         </ul>
@@ -107,7 +88,7 @@
     document.getElementById("y").textContent = new Date().getFullYear();
   </script>
 
-  <!-- ✅ IMPORTANT: shared theme logic -->
+  <!-- ✅ IMPORTANT: load shared theme logic -->
   <script src="../js/theme.js" defer></script>
 </body>
 </html>

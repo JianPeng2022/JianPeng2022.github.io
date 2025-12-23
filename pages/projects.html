@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Projects | Jian Peng</title>
+
+  <!-- ✅ Prevent theme flicker: set theme before CSS paints -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem("theme");
+      const prefersDark =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+      const theme =
+        (saved === "light" || saved === "dark")
+          ? saved
+          : (prefersDark ? "dark" : "light");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- ✅ Theme toggle button -->
+  <button
+    class="theme-toggle"
+    id="themeToggle"
+    aria-label="Toggle theme"
+    aria-pressed="false"
+  >
+    <span class="theme-icon" aria-hidden="true">☾</span>
+    <span class="theme-text">Dark</span>
+  </button>
+
+  <main class="container">
+    <div class="page-header">
+      <div>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-subtitle">Selected projects and highlights (portfolio style).</p>
+      </div>
+
+      <nav class="breadcrumb">
+        <a href="../index.html">Home</a>
+        <a href="./work.html">Work</a>
+        <a href="./education.html">Education</a>
+        <a href="./personal.html">Personal</a>
+        <a href="./about.html">About</a>
+      </nav>
+    </div>
+
+    <section class="section">
+      <article class="card">
+        <h2 class="item-title">Enterprise Data/BI Platform (Microsoft Fabric)</h2>
+        <p class="item-meta">Central data hub integrating multiple business systems; robust pipelines and quality checks.</p>
+        <ul>
+          <li>Connected Dynamics 365, Salesforce, Tradebyte, Kubix/Lectra, BigQuery, and on-prem sources.</li>
+          <li>Designed reliable ingestion and transformation workflows for cross-department analytics.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Microsoft Fabric</span><span class="badge">PySpark</span><span class="badge">SQL</span><span class="badge">Power BI</span>
+        </div>
+        <div class="badges">
+          <span class="badge">Link: (add later)</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Free-Text Information Extraction in Databricks</h2>
+        <p class="item-meta">Active-learning-oriented pattern recognition with dynamic trigger logic to improve over time.</p>
+        <ul>
+          <li>Extracted relevant signals from unstructured text; enabled continuous improvement loops.</li>
+          <li>Integrated results into reporting and platform features.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Azure Databricks</span><span class="badge">PySpark</span><span class="badge">Pattern Mining</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Data Vault 2.0 Validation & Reconciliation</h2>
+        <p class="item-meta">Systematic validation against legacy systems using row-level and hash-key comparisons.</p>
+        <ul>
+          <li>Built comparison routines to ensure correctness and trust in the new model.</li>
+          <li>Migrated dashboards and reconciled results end-to-end.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Data Vault 2.0</span><span class="badge">SQL</span><span class="badge">Qlik Sense</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Airflow Automation for Data Refresh Pipelines</h2>
+        <p class="item-meta">Automated recurring data refresh processes and improved reporting reliability.</p>
+        <ul>
+          <li>Developed Python scripts and Airflow DAGs for scheduled refresh.</li>
+          <li>Supported monthly standard reporting and KPI data marts.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">Airflow</span><span class="badge">SQL</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Measurement Data Automation (Hydrogen Fuel Cells)</h2>
+        <p class="item-meta">Automated processing and cloud upload of measurement data with daily analytics routines.</p>
+        <ul>
+          <li>Reduced manual work by scripting the pipeline and standardizing analysis outputs.</li>
+          <li>Produced concise internal performance reports.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">Python</span><span class="badge">Data Processing</span><span class="badge">Reporting</span>
+        </div>
+      </article>
+
+      <article class="card">
+        <h2 class="item-title">Website / Dashboard Modernization</h2>
+        <p class="item-meta">Restructured an internal platform and extended dashboards for business users.</p>
+        <ul>
+          <li>Reorganized data structures; built consolidated model for analytics and UI usage.</li>
+          <li>Developed new features and dashboards for stakeholders.</li>
+        </ul>
+        <div class="badges">
+          <span class="badge">SQL</span><span class="badge">Power BI</span><span class="badge">Platform Engineering</span>
+        </div>
+      </article>
+    </section>
+
+    <footer class="footer">© <span id="y"></span> Jian Peng</footer>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- ✅ IMPORTANT: load shared theme logic -->
+  <script src="../js/theme.js" defer></script>
+</body>
+</html>

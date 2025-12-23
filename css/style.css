@@ -170,17 +170,23 @@ a:hover{
   line-height: 1.12;
 }
 
+/* ✅ Key: underline follows title width */
+.page-title-wrap{
+  display: inline-block; /* width = title width */
+}
+
 .page-rule{
-  margin: 12px 0 10px;
+  width: 100%;
   height: 2px;
-  width: min(420px, 70%);
-  background: var(--text);
-  opacity: 0.15;
+  margin-top: 10px;
+  background: var(--text);   /* ✅ 纯色 */
+  opacity: 0.18;             /* 稍微轻一点 */
   border-radius: 999px;
 }
 
+
 .page-subtitle{
-  margin: 0;
+  margin: 10px 0 0;
   color: var(--muted);
   font-size: 1.02rem;
 }
@@ -408,16 +414,3 @@ a:hover{
   .timeline-summary{ grid-template-columns: 48px 1fr auto; }
   .panel-grid{ grid-template-columns: 1fr; }
 }
-
-.page-rule{
-  width: 56px;
-  height: 2px;
-  margin-top: 10px;
-  background: linear-gradient(
-    to right,
-    var(--text),
-    transparent
-  );
-  opacity: 0.28;
-}
-

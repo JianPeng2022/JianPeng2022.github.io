@@ -4,8 +4,14 @@
   --muted: #666;
   --text: #111;
   --bg: #fff;
-  --chip-bg: rgba(255,255,255,0.12);
+
+  /* chips on hero links */
+  --chip-bg: #ffffff1f;
   --chip-border: rgba(255,255,255,0.35);
+
+  /* surfaces for cards / timeline */
+  --surface: rgba(0,0,0,0.02);
+  --surface-2: rgba(0,0,0,0.04);
 }
 
 :root[data-theme="dark"]{
@@ -13,8 +19,12 @@
   --bg: #1a1f25;
   --muted: rgba(245,245,245,0.75);
   --border: rgba(255,255,255,0.18);
+
   --chip-bg: rgba(0,0,0,0.20);
   --chip-border: rgba(255,255,255,0.35);
+
+  --surface: rgba(255,255,255,0.04);
+  --surface-2: rgba(255,255,255,0.06);
 }
 
 *{ box-sizing: border-box; }
@@ -125,4 +135,187 @@ body{
 
 .theme-toggle:hover{
   transform: translateY(-1px);
+}
+
+/* =========================================================
+   Timeline + Details (Work page)
+   Put your Work items inside: <section class="timeline">...
+   ========================================================= */
+
+.timeline{
+  position: relative;
+  margin-top: 18px;
+  padding-left: 22px; /* left line space */
+}
+
+.timeline::before{
+  content:"";
+  position:absolute;
+  left: 9px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: var(--text);
+  opacity: 0.18;
+}
+
+.timeline-item{
+  position: relative;
+  margin: 16px 0;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  background: transparent;
+}
+
+/* node dot */
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left: -18px;
+  top: 22px;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: var(--text);
+  opacity: 0.30;
+}
+
+/* summary (collapsed header) */
+.timeline-summary{
+  list-style: none;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: 56px 1fr auto;
+  gap: 14px;
+  align-items: start;
+  padding: 14px 14px 12px;
+  background: var(--surface);
+}
+
+.timeline-summary::-webkit-details-marker{ display:none; }
+
+.company-logo{
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  object-fit: contain;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+}
+
+/* title / meta */
+.summary-title{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.job-title{
+  margin: 0;
+  font-size: 1.05rem;
+  line-height: 1.25;
+}
+
+.company{
+  font-size: 0.98rem;
+  color: var(--muted);
+}
+
+.summary-meta{
+  margin-top: 4px;
+  color: var(--muted);
+  display:flex;
+  gap: 8px;
+  align-items:center;
+  font-size: 0.95rem;
+}
+
+.dot{ opacity: 0.6; }
+
+/* tag rows */
+.tag-rows{
+  margin-top: 10px;
+  display:grid;
+  gap: 8px;
+}
+
+.tag-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap: 8px;
+  align-items:center;
+}
+
+.tag-key{
+  font-size: 0.85rem;
+  color: var(--muted);
+  min-width: 62px;
+}
+
+.tag{
+  font-size: 0.85rem;
+  padding: 4px 8px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+}
+
+/* right column */
+.summary-right{
+  display:flex;
+  gap: 10px;
+  align-items:center;
+  padding-top: 2px;
+}
+
+.details-pill{
+  font-size: 0.85rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: transparent;
+  color: var(--muted);
+}
+
+.chevron{
+  display:inline-block;
+  transition: transform 180ms ease;
+  color: var(--muted);
+}
+
+/* rotate chevron when open */
+.timeline-item[open] .chevron{
+  transform: rotate(180deg);
+}
+
+/* expanded panel */
+.timeline-panel{
+  padding: 12px 14px 16px;
+}
+
+.panel-grid{
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 16px;
+}
+
+.panel-heading{
+  margin: 6px 0 10px;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.panel-list{
+  margin: 0;
+  padding-left: 18px;
+  display:grid;
+  gap: 8px;
+}
+
+/* responsive */
+@media (max-width: 860px){
+  .timeline-summary{ grid-template-columns: 48px 1fr auto; }
+  .panel-grid{ grid-template-columns: 1fr; }
 }

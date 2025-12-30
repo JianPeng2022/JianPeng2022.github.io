@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Work Experience | Jian Peng</title>
+  <title>Education | Jian Peng</title>
 
-  <!-- ✅ 可选但推荐：防止 light/dark 切换时闪一下 -->
+  <!-- Prevent theme flicker -->
   <script>
     (function () {
       const saved = localStorage.getItem("theme");
@@ -23,9 +23,8 @@
   <link rel="stylesheet" href="../css/style.css" />
 </head>
 
-
 <body>
-  <!-- ✅ Theme toggle button -->
+  <!-- Theme toggle button -->
   <button
     class="theme-toggle"
     id="themeToggle"
@@ -38,62 +37,301 @@
 
   <main class="container">
     <div class="page-header">
-      <div>
+      <div class="page-head">
         <h1 class="page-title">Education</h1>
         <div class="page-rule" aria-hidden="true"></div>
-        <p class="page-subtitle">Degrees and programs.</p>
+        <p class="page-subtitle">  An interdisciplinary education centered on data, spanning engineering, business, and society.</p>
       </div>
 
-      <nav class="breadcrumb">
+      <nav class="breadcrumb" aria-label="Primary">
         <a href="../index.html">Home</a>
         <a href="./work.html">Work</a>
         <a href="./projects.html">Projects</a>
         <a href="./personal.html">Personal</a>
+        <a href="./about.html">About</a>
       </nav>
     </div>
 
-    <section class="section">
-      <article class="card">
-        <h2 class="item-title">Technical University of Munich (TUM) — Master’s Studies (part-time)</h2>
-        <p class="item-meta">10/2020 – Present · Munich, Germany</p>
-        <ul>
-          <li><strong>Electrical Engineering and Information Technology (M.Sc.)</strong> — currently enrolled</li>
-          <li><strong>Politics & Technology (M.Sc.)</strong> — Grade 1.9 (completed)</li>
-          <li><strong>Management (M.Sc.)</strong> — Grade 1.9 (completed)</li>
-          <li><strong>Mechatronics and Robotics (M.Sc.)</strong> — Grade 1.8 (completed)</li>
-          <li><strong>Mechanical Engineering (M.Sc.)</strong> — Grade 2.0 (completed)</li>
+    <!-- Timeline -->
+    <section class="timeline">
+
+
+      <!-- 1) TUM — Politics & Technology -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/tum.svg" alt="TUM logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">M.Sc. Politics & Technology (Graduated)</h2>
+              <span class="company">Technical University of Munich (TUM)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich, Germany</span>
+              <span class="dot">•</span>
+              <span class="time">Oct 2023 – Dec 2024</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div>
+            <h3 class="panel-heading">Details</h3>
+            <ul class="panel-list">
+         <li>Interdisciplinary training at the intersection of technology, data, and public policy, focusing on how digital systems shape governance, society, and decision-making.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <details class="timeline-item" open>
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/tum.svg" alt="TUM logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">M.Sc. Management (Graduated)</h2>
+              <span class="company">Technical University of Munich (TUM)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich, Germany</span>
+              <span class="dot">•</span>
+              <span class="time">Oct 2022 – Mar 2024</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div>
+            <h3 class="panel-heading">Details</h3>
+            <ul class="panel-list">
+              <li>Management education focused on business decision-making, financial analysis, operations, and empirical methods for data-informed organizational strategy.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <!-- 3) TUM — Management -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/tum.svg" alt="TUM logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">M.Sc. Mechatronics and Robotics (Graduated)</h2>
+              <span class="company">Technical University of Munich (TUM)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich, Germany</span>
+              <span class="dot">•</span>
+              <span class="time">Mar 2022 – Mar 2023</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div>
+            <h3 class="panel-heading">Details</h3>
+            <ul class="panel-list">
+              <li>Mechatronics and robotics education integrating mechanics, control systems, sensing, and computational methods for complex engineering systems.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+      <!-- 3) TUM — Management -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/tum.svg" alt="TUM logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">M.Sc. Mechanical Engineering (Graduated)</h2>
+              <span class="company">Technical University of Munich (TUM)</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Munich, Germany</span>
+              <span class="dot">•</span>
+              <span class="time">Oct 2020 – Mar 2023</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div>
+            <h3 class="panel-heading">Details</h3>
+            <ul class="panel-list">
+              <li>Mechanical engineering training focused on analytical methods, system modeling, and engineering fundamentals.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 4) SF Education Center — German -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <!-- If you don't want images, use text wordmark -->
+            <div class="company-logo" style="display:grid;place-items:center;padding:6px;">
+              <span style="font-weight:800;letter-spacing:.04em;">SF</span>
+            </div>
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">German Language Studies</h2>
+              <span class="company">SF Education Center</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">Essen, Germany</span>
+              <span class="dot">•</span>
+              <span class="time">Sep 2019 – May 2020</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+        <div class="timeline-panel">
+          <div>
+            <h3 class="panel-heading">Details</h3>
+            <ul class="panel-list">
+              <li>Completed an intensive German language program and obtained the German C1 certificate.</li>
+            </ul>
+          </div>
+        </div>
+      </details>
+
+      <!-- 5) University of León -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/uleon.svg" alt="University of León logo" />
+          </div>
+
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">B.Eng. Mechanical Engineering (Graduated)</h2>
+              <span class="company">University of León</span>
+            </div>
+
+            <div class="summary-meta">
+              <span class="location">León, Spain</span>
+              <span class="dot">•</span>
+              <span class="time">Sep 2016 – Jul 2019</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+    <div class="timeline-panel">
+      <div>
+        <h3 class="panel-heading">Details</h3>
+        <ul class="panel-list">
+          <li>Completed this stage as part of a dual-degree and international Mechanical Engineering program.</li>
         </ul>
-      </article>
+      </div>
+    </div>
 
-      <article class="card">
-        <h2 class="item-title">SF Education Center — German Language Studies</h2>
-        <p class="item-meta">09/2019 – 05/2020 · Essen, Germany</p>
-        <ul>
-          <li>Levels B1–C1; telc Deutsch C1 Hochschule certificate.</li>
-        </ul>
-      </article>
+      </details>
 
-      <article class="card">
-        <h2 class="item-title">University of León — B.Eng. Mechanical Engineering</h2>
-        <p class="item-meta">09/2016 – 07/2019 · León, Spain · Grade 2.7</p>
-      </article>
+      <!-- 6) Xiangtan University -->
+      <details class="timeline-item">
+        <summary class="timeline-summary">
+          <div class="summary-left">
+            <img class="company-logo" src="../assets/edu/xtu.png" alt="Xiangtan University logo" />
+          </div>
 
-      <article class="card">
-        <h2 class="item-title">Xiangtan University — B.Eng. Mechanical Engineering</h2>
-        <p class="item-meta">09/2014 – 07/2016 · China · Grade 2.7</p>
-      </article>
+          <div class="summary-main">
+            <div class="summary-title">
+              <h2 class="job-title">B.Eng. Mechanical Engineering (Graduated)</h2>
+              <span class="company">Xiangtan University</span>
+            </div>
 
-      <article class="card">
-        <h2 class="item-title">Scholarship</h2>
-        <ul>
-          <li>Deutschlandstipendium 2023/2024</li>
-        </ul>
-      </article>
+            <div class="summary-meta">
+              <span class="location">Xiangtan, China</span>
+              <span class="dot">•</span>
+              <span class="time">Sep 2014 – Jul 2016</span>
+            </div>
+          </div>
+
+          <div class="summary-right">
+            <span class="details-pill">Details</span>
+            <span class="chevron" aria-hidden="true">⌄</span>
+          </div>
+        </summary>
+
+<div class="timeline-panel">
+  <div>
+    <h3 class="panel-heading">Details</h3>
+    <ul class="panel-list">
+      <li>Part of a dual-degree and international training program in Mechanical Engineering.</li>
+    </ul>
+  </div>
+</div>
+
+      </details>
+
+
     </section>
 
     <footer class="footer">© <span id="y"></span> Jian Peng</footer>
   </main>
 
-  <script>document.getElementById("y").textContent = new Date().getFullYear();</script>
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Optional: accordion behavior -->
+  <script>
+    document.querySelectorAll(".timeline-item").forEach((item) => {
+      item.addEventListener("toggle", () => {
+        if (item.open) {
+          document.querySelectorAll(".timeline-item").forEach((other) => {
+            if (other !== item) other.open = false;
+          });
+        }
+      });
+    });
+  </script>
+
+  <script src="../js/theme.js" defer></script>
 </body>
 </html>
